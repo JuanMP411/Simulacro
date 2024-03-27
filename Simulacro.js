@@ -1,18 +1,20 @@
-function nota(numero){
+function evaluar(nota){
 
-    if (numero <=4){
+    if (nota >= 1 && nota < 4) {
+        return "Libre"
 
-        console.log("Libre");
+    } else if (nota < 7) {
+        return "Regular"
 
-    } else if (numero >4 && numero < 7){
+    } else if (nota > 7 && nota < 10){
+        return "Promoción"
 
-        console.log("Regular"); 
-
-    } else { (numero > 6 )
-
-        console.log("Promocionado");
+    } else {
+        return "Ingrese un número entre 1 y 10"
     }
-
 }
 
-console.log(nota(7))
+let nota = 8
+let notaEvaluada = evaluar (nota)
+
+console.log(notaEvaluada)
